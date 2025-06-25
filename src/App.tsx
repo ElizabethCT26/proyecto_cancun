@@ -1,8 +1,8 @@
-import Info from './Sections/Informacion/Informacion'
-import Contactanos from './components/Contacto/contactanos'
-import Home from './components/Home/Home'
+import Contactanos from './Sections/contactanos/Contactanos'
 import Footer from './components/footer/FooterComponent'
-import Header from './components/header/Header'
+import TerminosCondiciones from './components/condiciones/condicion'
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
+import AvisoPrivacidad from './components/Aviso/Privacidad'
 
 
 
@@ -13,11 +13,16 @@ function App() {
     <>
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
     
-        <Header />
-        <Home />
-        <Info />
-        <Contactanos/>
+
+          <BrowserRouter>
+              <Routes>
+                <Route path='/' element={<Contactanos/>}/>
+                <Route path='conditions' element={<TerminosCondiciones/>}/>
+                <Route path='aviso' element={<AvisoPrivacidad/>}/>
+              </Routes>
+          </BrowserRouter>
         <Footer />
+        
         
       </div>
     </>

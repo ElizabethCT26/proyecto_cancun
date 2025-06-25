@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha'
+import { Link } from 'react-router-dom';
 
 interface FormData {
     nombre: string; 
@@ -148,8 +149,21 @@ function Contactanos() {
                     </div>
                     
 
-                    <input type="checkbox"></input><label className='mx-2'>He leido y acepto los <span className="text-blue-400 cursor-pointer">terminos y condiciones</span>.</label>
+                    <input type="checkbox"></input><label className='mx-2'>He leido y acepto los 
+                       <Link to='/conditions'>
+                         <button  className="text-blue-400 cursor-pointer p-1">terminos y condiciones</button>.
+                       </Link>
+                    </label>
+
+                     <div >
+                        <Link to="aviso" className="text-blue-500 hover:underline">
+                            Aviso de privacidad
+                        </Link>
+                    </div>
                 </div>
+           <div>
+                      
+           </div>
 
                 <div>
                     <button
