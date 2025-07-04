@@ -1,4 +1,3 @@
-import HeaderAdministrador from "../HeaderAdm/HeaderAdmin";
 import {
   LineChart,
   Line,
@@ -12,7 +11,6 @@ import {
 function Dashboard() {
   return (
     <>
-      <HeaderAdministrador />
    
             <div>
                 <div className="flex justify-center text-center items-center mx-auto">

@@ -1,4 +1,4 @@
-import Imagen from "../../assets/images/Logo.png";
+import { Link } from 'react-router-dom';
 
 type Props = {
   sidebar: boolean;
@@ -17,10 +17,8 @@ function Sidebar({ sidebar, setSidebar }: Props) {
     >
 
       <div className="flex mt-[2.5vh] md:mt-[1vh] items-center justify-center ">
-        <img src={Imagen} alt="Logo" className="h-[3.2vh] md:h-[5vh]" />
+        <h1>Tours.com</h1>
       </div>
-
-      {/* Botón para cerrar */}
       <button
         onClick={() => setSidebar(false)}
         className="absolute top-4 right-4 text-2xl font-semibold cursor-pointer"
@@ -28,15 +26,13 @@ function Sidebar({ sidebar, setSidebar }: Props) {
         X
       </button>
 
-      {/* Menú */}
       <nav className="mt-12 flex flex-col mx-[2vw] gap-6 text-lg">
-        <a className="cursor-pointer">Inicio</a>
-        <a className="cursor-pointer">Los 177 Pueblos Mágicos</a>
-        <a className="cursor-pointer">Estados</a>
-        <a className="cursor-pointer">México Desconocido</a>
+       <Link to="/dashboard" onClick={() => setSidebar(false)}>Dashboard</Link>
+  <Link to="/usuarios" onClick={() => setSidebar(false)}>Usuarios</Link>
+  <Link to="/login" onClick={() => setSidebar(false)}>Cerrar sesión</Link>
       </nav>
 
-      {/* Derechos */}
+  
       <div className="absolute bottom-4 text-xs left-[2vw] text-gray-400">
         © 2024 Pueblos Mágicos | México Desconocido
       </div>
