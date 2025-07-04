@@ -46,7 +46,7 @@ function Contactanos() {
   const [aceptaTerminos, setAceptaTerminos] = useState(false);
 
   const siteKey = '6LfTlWwrAAAAANb2OSRcr0cQPazu12Chy2w3UOk1';
-  const api = 'http://localhost:8082/form';
+  const api = 'http://157.245.116.21/api/leads';
 
   useEffect(() => {
     loadReCaptchaScript()
@@ -117,6 +117,7 @@ function Contactanos() {
 
     try {
       const response = await axios.post(api, { ...formData, captcha: captchaToken });
+      console.log(response)
       toast.success('Formulario enviado con éxito ✅');
 
       setFormData({ nombre: '', correo: '', telefono: '', mensaje: '' });
