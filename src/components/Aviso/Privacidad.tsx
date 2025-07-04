@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { ShieldQuestion, User, Info, ClipboardList, RotateCcw } from 'lucide-react';
+import Footer from '../footer/FooterComponent';
 
 function AvisoPrivacidad() {
   return (
+    <>
     <div className="max-w-4xl mx-auto my-10 px-6 py-8 bg-white rounded-2xl shadow-lg border border-gray-200">
       <h1 className="text-4xl font-bold text-center text-blue-900 mb-8">
         Aviso de Privacidad
@@ -78,6 +80,8 @@ function AvisoPrivacidad() {
         </Link>
       </div>
     </div>
+      <Footer/>
+    </>
   );
 }
 

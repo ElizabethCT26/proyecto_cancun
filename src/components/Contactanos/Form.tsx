@@ -85,7 +85,11 @@ function Contactanos() {
                 className="max-w-md mx-auto bg-white p-[2vw] w-[40vw] rounded shadow"
                 onSubmit={handleSubmit}
             >
-                <h2 className="text-lg font-semibold mb-4">¡Tus datos!</h2>
+                <h2 className="text-lg font-semibold mb-4">Registra tus datos</h2>
+                    <div>
+                        <p className='text-xs text-slate-400 p-[2vh]'>Favor de ingresar sus datos, para más información</p>
+                    </div>
+
 
                 <div className="mb-4 text-left">
                     <label className="block mb-2 font-medium" htmlFor="nombre">

@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { ShieldCheck, UserCheck, Lock, RefreshCcw, Mail } from 'lucide-react';
+import Footer from '../footer/FooterComponent';
 
 function TerminosCondiciones() {
     return (
+        <>
         <div className="max-w-4xl mx-auto my-10 px-6 py-8 bg-white rounded-2xl shadow-lg border border-gray-200">
             <h1 className="text-4xl font-bold text-center text-blue-900 mb-8">
                 Términos y Condiciones
@@ -70,7 +72,11 @@ function TerminosCondiciones() {
                     ← Volver al inicio
                 </Link>
             </div>
+           
         </div>
+        
+         <Footer/>
+         </>
     );
 }
 

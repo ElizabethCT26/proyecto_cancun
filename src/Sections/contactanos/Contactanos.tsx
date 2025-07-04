@@ -2,6 +2,7 @@ import Header from '../../components/header/Header'
 import Home from '../../components/Home/Home'
 import Info from '../Informacion/Informacion'
 import Form  from '../../components/Contactanos/Form'
+import Footer from '../../components/footer/FooterComponent'
 
 function Contactanos() {
   return (
@@ -10,6 +11,7 @@ function Contactanos() {
         <Home />
         <Info />
         <Form />
+        <Footer/>
     </>
   )
 }
