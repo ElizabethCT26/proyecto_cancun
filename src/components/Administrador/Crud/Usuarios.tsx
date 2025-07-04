@@ -18,12 +18,16 @@ function Usuarios() {
                 </tr>
             </thead>
             <tbody>
-                <tr className="hover:bg-pink-100 transition-colors duration-300">
+                <tr className="hover:bg-gray-100 transition-colors duration-300">
                 <td className=" px-6 py-2">Adios</td>
                 <td className=" px-6 py-2">correo@ejemplo.com</td>
                 <td className=" px-6 py-2">9987656</td>
-                <td className=" px-6 py-2 text-green-600 font-semibold">Activo</td>
                 <td className=" px-6 py-2">Holaaa</td>
+                <td className=" px-6 py-2">
+                    <span className="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">
+                  Activo
+                </span>
+                </td>
                <td className="px-6 py-2 flex gap-2">
                     <button className="px-[1vw] bg-yellow-500 text-white rounded-md text-xs w-[8vw]">Cambiar estado</button>
                     <button className="px-[1vw] bg-red-600 text-white rounded-md w-[8vw] text-xs">Eliminar</button>

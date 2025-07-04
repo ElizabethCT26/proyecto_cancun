@@ -81,7 +81,7 @@ function Login() {
         </div>
 
         {/* Lado derecho decorativo */}
-        <div className="bg-gradient-to-b from-pink-500 to-black rounded-l-4xl rounded-r-md w-[50vw] h-full"></div>
+        <div className="bg-gradient-to-b from-blue-900 to-black rounded-l-4xl rounded-r-md w-[50vw] h-full"></div>
       </div>
 
       {/* Toast notifications */}
