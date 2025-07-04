@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
+
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const navigate = useNavigate()
 
   const validar = () => {
     if (!email.trim()) {
@@ -26,12 +31,32 @@ function Login() {
     return true;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!validar()) return;
-    toast.success('Inicio de sesión exitoso ✅');
+
+    try {
+      const response = await axios.post('http://157.245.116.21/api/login', {
+        correo: email,
+        contrasena: password
+      });
+
+      sessionStorage.setItem('token', response.data);
+      toast.success('Inicio de sesión exitoso');
+
+      navigate('/usuarios')
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        //toast.error(error.response?.data?.message || 'Error en el inicio de sesión ');
+        toast.error('Credenciales incorrectas');
+      } else {
+        toast.error('Ocurrió un error inesperado ❌');
+      }
+      console.error('Login error:', error);
+    }
   };
+
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
