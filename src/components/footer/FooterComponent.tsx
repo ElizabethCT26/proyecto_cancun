@@ -6,7 +6,7 @@ import {
   FaYoutube,
   FaTiktok,
 } from "react-icons/fa";
-import img7 from "../../assets/Images/mexico.png";
+import img7 from "../../assets/images/mexico.png";
 
 
 
