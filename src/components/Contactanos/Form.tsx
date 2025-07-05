@@ -45,7 +45,7 @@ function Contactanos() {
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [aceptaTerminos, setAceptaTerminos] = useState(false);
 
-  const siteKey = '6LfTlWwrAAAAANb2OSRcr0cQPazu12Chy2w3UOk1';
+  const siteKey = import.meta.env.VITE_RECAPTCHA_PUBLIC_KEY;
   const api = 'http://157.245.116.21/api/leads';
 
   useEffect(() => {
