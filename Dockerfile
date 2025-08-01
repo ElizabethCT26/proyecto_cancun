@@ -1,3 +1,4 @@
+#Frontend/Dockerfile -- Do not confuse, pls
 FROM node:20 AS builder
 WORKDIR /app
 COPY . .
