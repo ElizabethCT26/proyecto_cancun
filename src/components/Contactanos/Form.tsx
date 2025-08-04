@@ -46,7 +46,8 @@ function Contactanos() {
   const [aceptaTerminos, setAceptaTerminos] = useState(false);
 
   const siteKey = import.meta.env.VITE_RECAPTCHA_PUBLIC_KEY;
-  const api = 'http://157.245.116.21/api/leads';
+  const apiUrl = import.meta.env.VITE_API_URL
+  const api = `${apiUrl}/api/leads`;
 
   useEffect(() => {
     loadReCaptchaScript()

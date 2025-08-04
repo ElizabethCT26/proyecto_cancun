@@ -13,6 +13,7 @@ interface ILead{
   Telefono: string,
   EstadoId: number,
 }
+  const apiUrl = import.meta.env.VITE_API_URL 
 
 function Usuarios() {
 
@@ -21,7 +22,7 @@ function Usuarios() {
 
   const fetchData = async () => {
       try {
-        const response = await axios.get('http://157.245.116.21/api/leads', {
+        const response = await axios.get(`${apiUrl}/api/leads`, {
         headers: {
           Authorization: `Bearer ${sessionStorage.getItem('token')}`
           }
@@ -35,7 +36,7 @@ function Usuarios() {
 
   const deleteUser = async (Id:number) => {
       try {
-        await axios.delete(`http://157.245.116.21/api/leads/${Id}`, {
+        await axios.delete(`${apiUrl}/api/leads/${Id}`, {
         headers: {
           Authorization: `Bearer ${sessionStorage.getItem('token')}`
           }
@@ -52,7 +53,7 @@ const toggleContact = async (Id: number, nuevoEstadoId: number) => {
   try {
     console.log(nuevoEstadoId)
     const response = await axios.patch(
-      `http://157.245.116.21/api/leads/${Id}`,
+      `${apiUrl}/api/leads/${Id}`,
       { estadoId: nuevoEstadoId },
       {
         headers: {

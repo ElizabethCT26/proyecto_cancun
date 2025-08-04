@@ -36,8 +36,9 @@ function Login() {
 
     if (!validar()) return;
 
+    const apiUrl = import.meta.env.VITE_API_URL
     try {
-      const response = await axios.post('http://157.245.116.21/api/login', {
+      const response = await axios.post(`${apiUrl}/api/login`, {
         correo: email,
         contrasena: password
       });
